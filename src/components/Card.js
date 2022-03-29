@@ -42,7 +42,7 @@ const Card = ({url}) =>{
             <div className='cont-card-pokemon' style={{background: color, border: `8px solid ${color}`}}>
                 <Link to={`/pokedex/${pokemon.id}` } className="card-poke">
                     <div className="c0">
-                        <img src={pokemon.sprites?.other.dream_world.front_default} />
+                        <img src={pokemon.sprites?.other.dream_world.front_default} alt="imagen logo pokedex"/>
                     </div>
                    <div className="cont-info-card-card">
                         <div className="c1">
