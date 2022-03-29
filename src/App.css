@@ -28,7 +28,7 @@ body{
   height: 40%;
   background-color: black;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 
 }
 .container-dad-top .container-black-top .circle-p{
