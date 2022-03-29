@@ -3,12 +3,12 @@ import logoPokedex from '../img/pokedex.png';
 import '../css/StylePokedexId.css';
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 
 const Pokedexid = () =>{
-    const href = window.location.href;
-    const idar = href.split("/");
-    const id = idar[5];
+
+    const { id } = useParams();
 
     const [pokemon, setPokemon] = useState({});
 

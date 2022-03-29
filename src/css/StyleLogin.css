@@ -68,3 +68,16 @@
     border-radius: 50%;
     background-color: black;
 }
+
+@media screen and (max-width:450px ){
+    .container-login h1{
+        font-size: 28px;
+    }
+    .container-login form{
+        width: 90vw;
+        height: 30px;
+    }
+    .container-login img{
+        width: 90vw;
+    }
+}

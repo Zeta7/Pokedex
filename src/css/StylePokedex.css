@@ -27,10 +27,10 @@
     padding-bottom: 30px;
 }
 .cont-inp-selec form{
-    width: 70%;
+    width: 65%;
     height: 40px;
     box-shadow: 0px 0px 3px #0000004a;
-    margin-right: 10px;
+    margin-right: 50px;
 }
 .cont-inp-selec form input{
     width: 70%;
@@ -45,4 +45,46 @@
     color: white;
     border: none;
     cursor: pointer;
+}
+.cont-selec{
+    width: 30%;
+    height: 40px;
+}
+.cont-selec select{
+    width: 100%;
+    height: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    box-shadow: 0px 0px 2px #00000064;
+    padding-left: 10px;
+}
+.cont-selec select option{
+    padding: 5px 0px;
+    color: #000000;
+}
+
+@media screen and (max-width:450px ){
+    .container-info-pokedex{
+        padding: 0px 20px;
+    }
+    .container-info-pokedex p{
+        text-align: center;
+    }
+    .cont-inp-selec{
+        flex-direction: column;
+        width: 90vw;
+    }
+    .cont-inp-selec form{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .cont-selec{
+        width: 100%;
+    }
+    .cont-selec select option{
+        padding: 5px 0px;
+        width: 90vw;
+    }
+
 }

@@ -4,16 +4,17 @@ import '../css/StyleCard.css';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
-const Card = ({url}) =>{
+const Card = ({url, setPokemon}) =>{
 
     const [pokemon, setpokemon] = useState({});
-    const [color, setColor] = useState("");
-
-    useEffect(()=>{
+    const[color, setColor] = useState("");
+    
+useEffect(()=>{
         axios.get(url)
         .then(res=>{
             setpokemon(res.data)
         });
+
         if(pokemon.types?.[0].type.name === "grass"){setColor("#50df9c")};
         if(pokemon.types?.[0].type.name === "fire"){setColor("#D93F3F")};
         if(pokemon.types?.[0].type.name === "water"){setColor("#83B9FF")};
@@ -35,7 +36,6 @@ const Card = ({url}) =>{
     },[url, pokemon]);
 
     
-
 
     return(
 

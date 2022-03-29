@@ -4,28 +4,35 @@ import '../css/StylePokedex.css';
 import { useSelector } from 'react-redux';
 import Pagination from './Pagination';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
 import Card from './Card';
 
 const Pokedex = () =>{
+    const navigate = useNavigate();
 
     const userName = useSelector(state => state.userName);
 
     const [pokemon, setPokemon] = useState([]);
+//pagination
+    const [currentPage, setCurrentPage] = useState(1);
+    const [pokePerPage] = useState(40);
 
-   const [loading, setLoading] = useState(false);
-   const [currentPage, setCurrentPage] = useState(1)
-   const [pokePerPage] =useState(40);
+//nombre pokemon
+    const [namePoke, setNamePoke] = useState("");
 
+//tipo de pokemon
+    const [typePoke, setTypePoke] = useState([]);
+    
 
     useEffect(()=>{
-        setLoading(true);
+        //todos los pokemones
         axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126')
-            .then(res => {
-                setPokemon(res.data?.results);
-        })
-        setLoading(false);
+            .then(res => setPokemon(res.data?.results));
+        //tipos de pokemones
+        axios.get('https://pokeapi.co/api/v2/type/')
+        .then(res=>setTypePoke(res.data.results));
+        
     }, []);
 
     const indexOfLastPoke = currentPage * pokePerPage;
@@ -35,10 +42,23 @@ const Pokedex = () =>{
     /*change page*/
     const paginate = number =>{
         setCurrentPage(number);
+        window.scrollTo({ top: 0, behavior: "smooth", });
     }
 
-    if(loading){
-        return <h2>Loading...</h2>
+    const onSubmit = e => {
+        e.preventDefault();
+        navigate(`/pokedex/${namePoke}`);
+        window.scrollTo({ top: 0, behavior: "smooth", });
+    }
+
+
+    const handleTipo = e =>{
+        axios.get(e.target.value)
+        .then(res=>console.log(res.data.moves));
+    }
+
+    if(typePoke){
+
     }
 
     return (
@@ -55,20 +75,35 @@ const Pokedex = () =>{
             </div>
             <div className='container-info-pokedex'>
                 <p><span>Bienvenido {userName},</span> aquí podras encontrar tu pokemón favorito</p>
+
                 <div className='cont-inp-selec'>
-                    <form>
-                        <input type='text'  placeholder='Busca un pokemon' />
+                    
+                    <form onSubmit={onSubmit}> 
+                        <input 
+                            type='text'  
+                            placeholder='Busca un pokemon'
+                            value={namePoke} onChange={e=>setNamePoke(e.target.value)}
+                         />
                         <button>Buscar</button>
                     </form>
-                    <div>
-                        <input type="" />
+
+                    <div className='cont-selec'>
+                        <select onChange={handleTipo}>
+                            <option value="">Selecciona un Tipo</option>
+                            {
+                                typePoke.map((type)=>(
+                                    <option value={type.url} key={type.url}>{type.name}</option>
+                                ))
+                            }
+                        </select>
                     </div>
                 </div>
+
                 < div className="container_info-list-card">
                     {
                         currentPoke.map((poke)=>(
                             <div key={poke.url} >
-                                <Card url={poke.url}/>
+                                <Card url={poke.url} setPokemon={setPokemon}/>
                             </div>
                         ))
                     }
