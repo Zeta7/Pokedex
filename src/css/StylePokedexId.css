@@ -1,0 +1,195 @@
+.container-inpo-poke-id{
+    width: 100vw;
+    padding: 0px 80px;
+}
+.container-contenido-id{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container-info-poke-id{
+    width: 100%;
+    margin-top: 100px;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.398);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.container-contenido-id img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 10px;
+}
+
+.container-contenido-id .font-color{
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(45deg, #1fcafd 0%, #bdff22 35%, #f7860e 100%);
+}
+.cont-id-id{
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+    border-bottom: 1px solid #d1cfcf;
+}
+
+.cont-id-id p{
+    border: 1px solid #b1aeae;
+    padding: 2px 8px;
+}
+.cont-id-id h2{
+    position: absolute;
+    top: 68px;
+    background-color: #ffffff;
+    padding: 0px 15px;
+    font-size: 25px;
+}
+
+.cont-peso-altura{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+.cont-peso-altura span{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.cont-peso-altura span p{
+    font-size: 10px;
+}
+
+.cont-tipo-habilidades{
+    width: 80%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+}
+.cont-tipo-habilidades--hijo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cont-tipo-habilidades--hijo p{
+    margin-bottom: 10px;
+}
+.cont-tipo-habilidades--hijo .hijo-cont-cuadre{
+    display: flex;
+}
+.cont-tipo-habilidades--hijo .hijo-cont-cuadre span{
+    width: 150px;
+    height: 30px;
+    margin: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cont-tipo-habilidades--hijo .hijo-cont-cuadre span p{
+    margin-bottom: 0px;
+}
+
+.spn1-tipo{
+    background: #1eb651;
+    color: white;
+}
+.spn2-tipo{
+    background: #bf15e9;
+    color: white;
+
+}
+.spn1-habilidades{
+    border: 1px solid #c4c1c1;
+}
+
+/*container stats*/
+.container-stats{
+    position: relative;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #aaa9a9;
+}
+.container-stats h3{
+    position: absolute;
+    top: -20px;
+    font-size: 25px;
+    background: white;
+    padding-right: 15px;
+}
+.barra-estadis{
+    width: 100%;
+}
+.barra-estadis-text{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.cont-estadistica{
+    width: 100%;
+    height: 25px;
+    background: #dfdbdb;
+    border: 1px solid #dfdbdb;
+    margin-bottom: 20px;
+}
+.cont-estadistica-hijo-h{
+    background-color: #ffc022;
+}
+
+/**/
+.container-movements{
+    width: 100%;
+    margin-top: 50px;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.398);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.continer-lis-movement{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.cont-movement-title{
+    position: relative;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top: 1px solid #a9a6a6;
+}
+.cont-movement-title h3{
+    font-size: 25px;
+    background: white;
+    padding-right: 15px;
+    position: absolute;
+    top: -20px;
+}
+.continer-lis-movement{
+    margin-top: 30px;
+}
+.item-movement{
+    padding: 5px 10px;
+    background: #a9a6a66e;
+    margin: 5px 10px;
+    border-radius: 10px;
+}

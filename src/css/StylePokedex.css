@@ -1,0 +1,48 @@
+.container-info-pokedex{
+    width: 100%;
+    height: auto;
+    padding: 0px 80px;
+}
+.container-info-pokedex p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.container-info-pokedex p span{
+    color: #DD1A1A;
+}
+
+.container_info-list-card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.container-info-pokedex .cont-inp-selec{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.cont-inp-selec form{
+    width: 70%;
+    height: 40px;
+    box-shadow: 0px 0px 3px #0000004a;
+    margin-right: 10px;
+}
+.cont-inp-selec form input{
+    width: 70%;
+    height: 40px;
+    outline: none;
+    padding: 0px 10px;
+    border: none;
+}
+.cont-inp-selec form button{
+    width: 30%;
+    height: 40px;background: #DD1A1A;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
