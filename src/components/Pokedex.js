@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import logoPokedex from '../img/pokedex.png';
 import '../css/StylePokedex.css';
 import { useSelector } from 'react-redux';

@@ -1,3 +1,4 @@
+import React from 'react';
 import Pokedex from './components/Pokedex';
 import Login from './components/Login';
 import './App.css';
