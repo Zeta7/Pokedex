@@ -1,0 +1,34 @@
+.cont-pagination{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-pagination {
+}
+.cont-pagination ul{
+    display: flex;
+    list-style: none;
+}
+.item-pagination a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+.item-pagination a:hover{
+    background-color: #d81e1e;
+    color: white;
+}
+li.item-pagination {
+    width: 35px;
+    height: 20px;
+    border: 1px solid #e6e5e5;
+    
+}

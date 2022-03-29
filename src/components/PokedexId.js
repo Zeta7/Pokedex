@@ -7,7 +7,8 @@ import { useState, useEffect } from "react";
 
 const Pokedexid = () =>{
     const href = window.location.href;
-    const id = href.split("")[href.length -1];
+    const idar = href.split("/");
+    const id = idar[5];
 
     const [pokemon, setPokemon] = useState({});
 
@@ -15,7 +16,6 @@ const Pokedexid = () =>{
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then(res=>{
             setPokemon(res.data);
-            console.log(res.data);
         });
     },[id]);
     return(
@@ -81,7 +81,7 @@ const Pokedexid = () =>{
                                     <p>{pokemon.stats?.[0].base_stat}/150</p>
                                 </div>
                                 <div className="cont-estadistica">
-                                    <div className="cont-estadistica-hijo-h"style={{width: `${(150*100)/(pokemon.stats?.[0].base_stat)}px`, height: '25px'}}></div>
+                                    <div className="cont-estadistica-hijo-h" style={{width: `${((pokemon.stats?.[0].base_stat)*100)/150}%`, height: '25px'}}></div>
                                 </div>
                             </div>
 
@@ -91,7 +91,7 @@ const Pokedexid = () =>{
                                     <p>{pokemon.stats?.[1].base_stat}/150</p>
                                 </div>
                                 <div className="cont-estadistica">
-                                    <div className="cont-estadistica-hijo-h" style={{width: `${(150*100)/(pokemon.stats?.[1].base_stat)}px`, height: '25px'}}></div>
+                                    <div className="cont-estadistica-hijo-h" style={{width: `${((pokemon.stats?.[1].base_stat)*100)/150}%`, height: '25px'}}></div>
                                 </div>
                             </div>
 
@@ -101,7 +101,7 @@ const Pokedexid = () =>{
                                     <p>{pokemon.stats?.[2].base_stat}/150</p>
                                 </div>
                                 <div className="cont-estadistica">
-                                    <div className="cont-estadistica-hijo-h"style={{width: `${(150*100)/(pokemon.stats?.[2].base_stat)}px`, height: '25px'}}></div>
+                                    <div className="cont-estadistica-hijo-h" style={{width: `${((pokemon.stats?.[2].base_stat)*100)/150}%`, height: '25px'}}></div>
                                 </div>
                             </div>
 
@@ -111,7 +111,7 @@ const Pokedexid = () =>{
                                     <p>{pokemon.stats?.[5].base_stat}/150</p>
                                 </div>
                                 <div className="cont-estadistica">
-                                    <div className="cont-estadistica-hijo-h" style={{width: `${(150*100)/(pokemon.stats?.[5].base_stat)}px`, height: '25px'}}></div>
+                                    <div className="cont-estadistica-hijo-h" style={{width: `${((pokemon.stats?.[5].base_stat)*100)/150}%`, height: '25px'}}></div>
                                 </div>
                             </div>
                         </div>

@@ -7,13 +7,13 @@ import Pokedexid from './components/PokedexId';
 import ProtectedRoutes from './components/ProtectedRoutes';
 
 function App() {
-  
+
   return (
     <HashRouter >
       <Routes>
         <Route path='/' element={<Login />}/>
         <Route element={<ProtectedRoutes />}>
-          <Route path='/pokedex' element={<Pokedex/>}/>
+          <Route path='/pokedex' element={<Pokedex />}/>
           <Route path='/pokedex/:id' element={<Pokedexid />}/>
         </Route>
       </Routes>
