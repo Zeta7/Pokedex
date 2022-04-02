@@ -14,8 +14,11 @@
 .container-info-poke-id{
     width: 100%;
     margin-top: 100px;
-    border: 3px solid #ffffff;
-    border-radius: 5px;
+
+    border-left: 8px solid;
+    border-right: 8px solid;
+
+    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.398);
     display: flex;
     flex-direction: column;
@@ -27,12 +30,13 @@
     height: 200px;
     position: absolute;
     top: 10px;
+    filter: drop-shadow(0px 2px 6px #040404);
+
 }
 
 .container-contenido-id .font-color{
     width: 100%;
     height: 120px;
-    background: linear-gradient(45deg, #1fcafd 0%, #bdff22 35%, #f7860e 100%);
 }
 .cont-id-id{
     position: relative;
@@ -83,9 +87,11 @@
 }
 .cont-tipo-habilidades--hijo{
     width: 50%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .cont-tipo-habilidades--hijo p{
     margin-bottom: 10px;
@@ -105,17 +111,14 @@
     margin-bottom: 0px;
 }
 
-.spn1-tipo{
+.spn_tipo{
     background: #1eb651;
     color: white;
+    margin: 0px 10px;
 }
-.spn2-tipo{
-    background: #bf15e9;
-    color: white;
-
-}
-.spn1-habilidades{
+.spn-habilidades{
     border: 1px solid #c4c1c1;
+    margin: 0px 10px;
 }
 
 /*container stats*/
@@ -150,9 +153,7 @@
     border: 1px solid #dfdbdb;
     margin-bottom: 20px;
 }
-.cont-estadistica-hijo-h{
-    background-color: #ffc022;
-}
+
 
 /**/
 .container-movements{
@@ -161,6 +162,10 @@
     border: 3px solid #ffffff;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.398);
+    
+    border-left: 8px solid #6b0505;
+    border-right: 8px solid #6b0505;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -168,8 +173,8 @@
 .continer-lis-movement{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
 }
 .cont-movement-title{
     position: relative;
@@ -191,6 +196,44 @@
 .item-movement{
     padding: 5px 10px;
     background: #a9a6a66e;
-    margin: 5px 10px;
-    border-radius: 10px;
+    margin: 5px 1px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+@media screen and (max-width: 1050px) {
+    .cont-tipo-habilidades{
+        margin-bottom: 30px;
+    }
+    .cont-tipo-habilidades--hijo .hijo-cont-cuadre{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .spn_tipo{
+        margin: 5px 0px;
+    }
+    .spn1-habilidades{
+        margin: 5px 0px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .cont-tipo-habilidades{
+        flex-direction: column;
+        margin-bottom: 120px;
+    }
+    .cont-tipo-habilidades--hijo {
+        margin-top: 10px;
+    }
+    .spn_tipo{
+        margin: 5px 0px;
+    }
+    .spn1-habilidades{
+        margin: 5px 0px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .container-inpo-poke-id{
+        padding: 0px 20px;
+    }
 }

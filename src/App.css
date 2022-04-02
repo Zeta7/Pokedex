@@ -37,3 +37,13 @@ body{
   margin-top: -10px;
   margin-right: 80px;
 }
+
+@media screen and (max-width: 400px) {
+  .container-dad-top .container-red-top img{
+  
+    margin-left: 20px;
+  }
+  .container-dad-top .container-black-top .circle-p{
+    margin-right: 20px;
+  }
+}

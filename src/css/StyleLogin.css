@@ -19,7 +19,7 @@
 .container-login form{
     width: 400px;
     height: 30px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.234);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.234);
 }
 .container-login form input{
     width: 70%;
@@ -33,7 +33,7 @@
     height: 100%;
     border: none;
     cursor: pointer;
-    background: #DD1A1A;
+    background-image: linear-gradient(to right top, #6b0505, #c91032, #c91032, #c91032, #6b0505);
     color: white;
 }
 
