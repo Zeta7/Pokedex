@@ -2,28 +2,43 @@ import React from "react";
 import '../css/StylePagination.css';
 
 
-const Pagination = ({pokePerPage, totalPoke, paginate}) =>{
-
-    const pageNumber = [];
-
-    for (let i = 1; i <= Math.ceil(totalPoke / pokePerPage); i++) {
-        pageNumber.push(i)
-        
+const Pagination = ({page, setPage, totalPages, pagesNumber}) =>{
+ 
+//---------------------- change page ----------------------------//
+    const paginateLe= () =>{
+        setPage(page-1);
+        window.scrollTo({ top: 0, behavior: "smooth", });
     }
+    const paginateRi= () =>{
+        setPage(page+1);
+        window.scrollTo({ top: 0, behavior: "smooth", });
+    }
+
     return(
-        <nav className="cont-pagination">
-            <ul>
+        <>
+            <div className="cont-botones-rig-lef">
+                <button className="btn1" onClick={paginateLe}  disabled={page <= 1}>
+                    <i className="fa-solid fa-angles-left"></i>
+                </button>
+                <span> {page} / {totalPages} </span>
+                <button className="btn2" onClick={paginateRi}  disabled={page >= totalPages}>
+                    <i className="fa-solid fa-angles-right"></i>
+                </button>
+            </div>
+            <div className="cont-botones-numeros">
                 {
-                    pageNumber.map(number =>(
-                        <li key={number} className="item-pagination">
-                            <a onClick={()=>paginate(number)} href="#/pokedex/">
-                                {number}
-                            </a>
-                        </li>
+                    pagesNumber.map((pagesN)=>(
+                        <button 
+                            onClick={()=>setPage(pagesN)}
+                            style={(pagesN===page)?{background:"red", color:"white"}:{background:"white", color:"black"}} 
+                            key={pagesN}
+                        >
+                            {pagesN}
+                        </button>
                     ))
                 }
-            </ul>
-        </nav>
+            </div>
+        </>
     );
 };
 

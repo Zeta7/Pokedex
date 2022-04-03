@@ -1,48 +1,133 @@
-.cont-pagination{
+.conatiner-pagination-top{
     width: 100%;
-    height: auto;
-    margin-bottom: 30px;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
-
-.cont-pagination ul{
-    display: flex;
-    list-style: none;
-}
-.item-pagination a{
-    width: 100%;
+.conatiner-pagination-top .cont-botones-rig-lef{
+    width: auto;
     height: 100%;
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.conatiner-pagination-top .cont-botones-rig-lef i{
+   font-size: 8px;
+}
+.conatiner-pagination-top .cont-botones-rig-lef button{
+    width: 20px;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conatiner-pagination-top .cont-botones-rig-lef button:hover{
+    background-color: red;
+    color: white;
+}
+.conatiner-pagination-top .cont-botones-rig-lef button.btn1{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.conatiner-pagination-top .cont-botones-rig-lef button.btn2{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.conatiner-pagination-top .cont-botones-rig-lef  span{
+    width: 50px;
+    height: 100%;
+    font-size: 12px;
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
 }
-.item-pagination a:hover{
-    background-color: #d81e1e;
+
+.conatiner-pagination-top .cont-botones-numeros{
+    width: 90%;
+    height: 100%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.conatiner-pagination-top .cont-botones-numeros button{
+    width: 25px;
+    height: 100%;
+    font-size: 10px;
+    background: white;
+    border: none;
+    border-left: 1px solid #bbbbbb;
+    cursor: pointer;
+}
+.conatiner-pagination-top .cont-botones-numeros button:hover{
+    background: red;
     color: white;
 }
-li.item-pagination {
-    width: 35px;
-    height: 20px;
-    border: 1px solid #e6e5e5;
-    
+
+/*------------- pagination botton ---------------*/
+.cont-pagination-bottom{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
-@media screen and (max-width:1050px ){
-    .cont-pagination ul{
-        display: flex;
-        flex-wrap: wrap;
+.cont-pagination-bottom .cont-botones-rig-lef{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.cont-pagination-bottom .cont-botones-rig-lef button{
+    width: 30px;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+}
+.cont-pagination-bottom .cont-botones-rig-lef span{
+    width: 70px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+.cont-pagination-bottom .cont-botones-rig-lef button.btn1{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.cont-pagination-bottom .cont-botones-rig-lef button.btn2{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.cont-pagination-bottom .cont-botones-numeros{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cont-pagination-bottom .cont-botones-numeros button{
+    width: 25px;
+    height: 100%;
+    border: none;
+    background: white;
+    border: 1px solid #dbdbdb;
+    font-size: 10px;
+    cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+    .conatiner-pagination-top{
+        flex-direction: column;
     }
-    .cont-pagination{
-        width: 90vw;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+    .cont-botones-numeros{
+        visibility: collapse;
     }
 }
-   

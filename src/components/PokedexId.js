@@ -151,7 +151,7 @@ const Pokedexid = () =>{
                 </div>
 
 
-                <div className="container-movements"  >
+                <div className="container-movements">
                     <div className="cont-movement-title">
                         <h3>Movements</h3>
                         <div className="continer-lis-movement">
